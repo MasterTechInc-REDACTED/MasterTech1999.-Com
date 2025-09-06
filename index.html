@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MasterTech</title>
+  <style>
+    /* ===== Base Layout ===== */
+    body {
+      margin: 0;
+      background-color: #111;
+      color: #d3d3d3;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 1rem 2rem 1rem;
+      border-bottom: 1px solid #2a2a2a;
+      position: relative;
+      z-index: 2;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 0.25rem;
+      margin: 0;
+      color: #e0e0e0;
+      animation: flicker 5s infinite, glitch 3s infinite;
+    }
+
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 0.9rem;
+      color: #888;
+      animation: glitch 4s infinite;
+    }
+
+    nav {
+      text-align: center;
+      padding: 0.5rem;
+      border-bottom: 1px solid #2a2a2a;
+      position: relative;
+      z-index: 2;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #666;
+      font-size: 0.85rem;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: #a64aff;
+      animation: glitch 2s infinite;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    main p {
+      font-size: 1rem;
+      color: #555;
+      animation: glitch 6s infinite;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #444;
+      padding: 1rem;
+      border-top: 1px solid #2a2a2a;
+      position: relative;
+      z-index: 2;
+    }
+
+    footer a {
+      color: #666;
+      text-decoration: none;
+      margin-left: 0.5rem;
+    }
+
+    footer a:hover {
+      color: #a64aff;
+      animation: glitch 2s infinite;
+    }
+
+    /* ===== Glitch Effects ===== */
+    @keyframes flicker {
+      0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+      20%, 24%, 55% { opacity: 0.6; }
+    }
+
+    @keyframes glitch {
+      0% { text-shadow: 2px 0 purple, -2px 0 #00ffff; }
+      20% { text-shadow: -2px -2px purple, 2px 2px #00ffff; }
+      40% { text-shadow: 2px 2px purple, -2px -2px #00ffff; }
+      60% { text-shadow: -2px 2px purple, 2px -2px #00ffff; }
+      80% { text-shadow: 2px -2px purple, -2px 2px #00ffff; }
+      100% { text-shadow: 2px 0 purple, -2px 0 #00ffff; }
+    }
+
+    /* ===== Glitch Overlay ===== */
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: repeating-linear-gradient(
+        0deg,
+        rgba(166, 74, 255, 0.05),
+        rgba(166, 74, 255, 0.05) 2px,
+        transparent 2px,
+        transparent 4px
+      );
+      animation: scan 6s linear infinite;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    @keyframes scan {
+      0% { background-position: 0 -100px; }
+      100% { background-position: 0 100px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <header>
+    <h1>MASTERTECH</h1>
+    <p>Innovating Beyond Limits</p>
+  </header>
+
+  <nav>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <p>[Error: Content not available]</p>
+  </main>
+
+  <footer>
+    © 1999–2015 MasterTech Industries • 
+    <a href="mailto:mastertech.inc1999@gmail.com">Email Us</a>
+  </footer>
+
+  <!-- Hidden Clue: /archive -->
+  <audio autoplay loop>
+    <source src="audio/breathing-loop.mp3" type="audio/mpeg">
+  </audio>
+</body>
+</html>
